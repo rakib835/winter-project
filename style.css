@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9)),url(images/campus.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #333;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+}
+nav ul li a:hover{
+    color: #ff004e;
+}
+nav ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff004e;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.logo a{
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    right: 10%;
+}
+.text h1{
+    color: #fff;
+    font-size: 70px;
+}
+button img{
+    width: 25px;
+}
+span{
+    color: #ff004e;
+}
+.text p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.search-bar{
+    background: #fff;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 60px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.search-bar input{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+}
+button{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 0;
+    outline: none;
+}
+.about-section{
+    width: 100%;
+    text-align: center;
+    padding: 40px 10%;
+}
+.col-2 img{
+    width: 100%;
+    border-radius: 5px;
+}
+.about-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 30px 0;
+}
+.col-1, .col-2{
+    flex-basis: 50%;
+    padding: 10px;
+}
+.about-section h1{
+    font-size: 60px;
+}
+.col-1 h2{
+    font-size: 50px;
+}
+.col-1 p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #777;
+}
+.col-1 button{
+    width: 150px;
+    background: #ff004e;
+    height: 50px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 20px;
+    padding: 40px 0;
+}
+.hero-gallery img{
+    width: 100%;
+    border-radius: 5px;
+}
+.hero-gallery{
+    position: relative;
+}
+.layer{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: 0.5s;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background: linear-gradient(#ff004e,#000);
+    opacity: 0;
+    border-radius: 5px;
+}
+.layer p{
+    font-size: 13px;
+}
+.layer h3{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.layer h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.hero-gallery:hover .layer{
+    height: 100%;
+    opacity: 1;
+}
+.customer-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding: 40px 10%;
+    text-align: center;
+    grid-gap: 10px;
+}
+.customer h1{
+    text-align: center;
+    font-size: 60px;
+    padding: 20px 0;
+}
+.customer-text{
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+.customer-text p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.customer-text h3{
+    font-size: 30px;
+}
+.customer-text img{
+    width: 100px;
+    border-radius: 50%;
+    background: #777;
+    padding: 5px;
+}
+.contact{
+    text-align: center;
+    padding: 40px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left-col, .right-col{
+    flex-basis: 50%;
+}
+.left-col{
+    text-align: left;
+}
+.left-col h2{
+    font-size: 40px;
+}
+.left-col h5{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.left-col p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.right-col form{
+    width: 100%;
+}
+.right-col form input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+.right-col textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:770px){
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: darkcyan;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    nav ul li a{
+        font-size: 25px;
+    }
+    .search-bar{
+        width: 300px;
+        padding: 8px;
+    }
+    .search-bar input{
+        font-size: 15px;
+        padding: 8px;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+        background: #fff;
+    }
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 5px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .menu-icon div{
+        width: 26px;
+        height: 3px;
+        background: #fff;
+    }
+    .close{
+        margin-top: -100vh;
+    }
+    .text h1{
+        font-size: 40px;
+    }
+    .text p{
+        font-size: 18px;
+    }
+    .col-1, .col-2{
+        flex-basis: 100%;
+    }
+    .about-section h1{
+        font-size: 40px;
+    }
+    .col-1 h2{
+        font-size: 35px;
+    }
+    .col-1 p{
+        font-size: 20px;
+    }
+    .col-2 img{
+        margin-top: 40px;
+    }
+    .customer h1{
+        font-size: 35px;
+    }
+    .left-col, .right-col{
+        flex-basis: 100%;
+    }
+    form{
+        margin-top: 20px;
+    }
+    .text h1{
+        font-size: 35px;
+    }
+}
